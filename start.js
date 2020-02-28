@@ -74,7 +74,7 @@ function showAllAlbums () {
     strs.push('      <div class="gallery-container">')
     for (var i in album.photoFiles) {
       photoFile = album.albumDirectory + '/' + album.photoFiles[i]
-      thumbnailFile = album.albumDirectory + '/_thumbnails/' + album.photoFiles[i]
+      thumbnailFile = album.albumDirectory + '/thumbnails/' + album.photoFiles[i]
       strs.push('        <div class="album">');
       strs.push('          <a target="_blank" href="' + photoFile + '">');
       strs.push('            <img class="cover-main" src="' + thumbnailFile + '" alt="Ballade" width="200" height="200"');
