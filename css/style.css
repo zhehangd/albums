@@ -46,8 +46,9 @@ a:active {color: inherit;text-decoration: none;}
   /*background: #201010;*/
 }
 
-.gallery-container {
+.photo-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .album {
