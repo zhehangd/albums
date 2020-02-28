@@ -51,6 +51,22 @@ a:active {color: inherit;text-decoration: none;}
   flex-wrap: wrap;
 }
 
+.photo-container {
+  margin:24px;
+  height: 200px;
+  width: 200px;
+  position: relative; /* must set so .info can set position */
+  transition: transform 0.3s, border 0.3s;
+  box-shadow: -1px 3px 4px #111;
+  border: 1px solid #cecece;
+}
+
+.photo-container:hover {
+  transition: transform 0.3s, border 0.3s;
+  transform: scale(1.05);
+  border: 1px solid #2293ec;
+}
+
 .album {
   margin:24px;
   height: 200px;
@@ -116,7 +132,6 @@ a:active {color: inherit;text-decoration: none;}
   text-align: center;
   font-weight: bold;
 }
-
 
 #header-search {
   width: 180px;

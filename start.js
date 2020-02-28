@@ -52,6 +52,8 @@ function loadAlbumsJson() {
 }
 
 function dev() {
+  var element = document.getElementById('dev-group');
+  element.innerHTML = "";
 }
 
 window.onload = function() {
