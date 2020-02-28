@@ -3,6 +3,23 @@
   
   <head>
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    
+    <script id="template-photo" type="x-tmpl-mustache">
+      {{#albums}}
+      <h2> {{albumName}} </h2>
+      <div class="gallery-container">
+        {{#photos}}
+        <div class="album">
+          <a target="_blank" href="{{photoFile}}">
+            <img class="cover-main" src="{{thumbnailFile}}" alt="Ballade" width="200" height="200" <="" a="">
+          </a>
+        </div>
+        {{/photos}}
+      </div>
+      {{/albums}}
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.js"></script>
     <script src="start.js"></script>
   </head>
   
@@ -18,8 +35,11 @@
           <a id="header-menu-botton">Menu</a>
         </span>
     </nav>
+    
     <div id="main-group" class="gallery-group">
     </div>
+    
+    <div id="dev-group" class="gallery-group">
+    </div>
   </body>
-  
 </html>

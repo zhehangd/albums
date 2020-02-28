@@ -3,8 +3,8 @@ console.log("console hello");
 
 function requestFile(url, callback) {
   function fail(code) {
-    var textarea = document.getElementById('test-response-text');
-    textarea.innerHTML = 'Error code: ' + code;
+    var element = document.getElementById('test-response-text');
+    element.innerHTML = 'Error code: ' + code;
     console.log("fail");
   }
   var request = new XMLHttpRequest();
@@ -22,71 +22,26 @@ function requestFile(url, callback) {
   request.send();
 }
 
-function render_album_preview(dirname) {
-    function success(content) {
-        var album = JSON.parse(content);
-        var strs = []
-        for (var i in album.photoFiles) {
-          photoFile = album.directory + '/' + album.photoFiles[i]
-          thumbnailFile = album.directory + '/' + album.thumbFiles[i]
-          strs.push('<div class="album">');
-          strs.push('  <a target="_blank" href="' + photoFile + '">');
-          strs.push('    <img class="cover-main" src="' + thumbnailFile + '" alt="Ballade" width="200" height="200"');
-          strs.push('  </a>');
-          strs.push('</div>');
-          strs.push('');
-        }
-        
-        var textarea = document.getElementById('dynamic-container');
-        textarea.innerHTML = strs.join('\n');
-    }
-
-  function fail(code) {
-    var textarea = document.getElementById('test-response-text');
-    textarea.innerHTML = 'Error code: ' + code;
-    console.log("fail");
-  }
-
-  var request = new XMLHttpRequest();
-  request.onreadystatechange = function () {
-    if (request.readyState === 4) {
-      if (request.status === 200) {
-        return success(request.responseText);
-      } else {
-        return fail(request.status);
-      }
-    } else {
-    }
-  }
-  
-  request.open('GET', '/albums');
-  request.send();
-}
-
 var albums = [];
 
 function showAllAlbums () {
   var strs = []
-  
+  var view_category = {"albums" : []};
   for (var k = 0; k < window.albums.length; k++) {
     album = window.albums[k]
-    strs.push('      <h2> ' + album.albumName + ' </h2>')
-    strs.push('      <div class="gallery-container">')
+    var view_album = {};
+    view_album.albumName = album.albumName;
+    view_album.photos = [];
     for (var i in album.photoFiles) {
       photoFile = album.albumDirectory + '/' + album.photoFiles[i]
       thumbnailFile = album.albumDirectory + '/thumbnails/' + album.photoFiles[i]
-      strs.push('        <div class="album">');
-      strs.push('          <a target="_blank" href="' + photoFile + '">');
-      strs.push('            <img class="cover-main" src="' + thumbnailFile + '" alt="Ballade" width="200" height="200"');
-      strs.push('          </a>');
-      strs.push('        </div>');
-      strs.push('');
+      view_album.photos.push({'photoFile': photoFile, 'thumbnailFile': thumbnailFile});
     }
-    strs.push('      </div>')
+    view_category['albums'].push(view_album);
   }
-  stars = strs.join('\n');
-  var textarea = document.getElementById('main-group');
-  textarea.innerHTML = stars;
+  var template = document.getElementById('template-photo').innerHTML;
+  var element = document.getElementById('main-group');
+  element.innerHTML = Mustache.render(template, view_category);
 }
 
 function loadAlbumsJson() {
@@ -94,9 +49,12 @@ function loadAlbumsJson() {
     window.albums = JSON.parse(content);
     showAllAlbums();
   });
-  
+}
+
+function dev() {
 }
 
 window.onload = function() {
   loadAlbumsJson();
+  dev();
 }
