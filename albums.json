@@ -1,25 +1,47 @@
-[
- {
-  "albumName": "2020-02-27.Garden.of.Stars",
-  "albumDirectory": "albums/2020-02-27.Garden.of.Stars",
-  "photoFiles": [
-   "IMG_5097.jpg",
-   "IMG_5090.jpg",
-   "IMG_5086.jpg"
-  ]
- },
- {
-  "albumName": "2019-12-23.\u5173\u5c9b\u65e5\u98df",
-  "albumDirectory": "albums/2019-12-23.\u5173\u5c9b\u65e5\u98df",
-  "photoFiles": [
-   "IMG_3337.jpg",
-   "IMG_2924.jpg",
-   "IMG_3187.jpg",
-   "IMG_3682_hdr.jpg",
-   "IMG_3200.jpg",
-   "IMG_3555_hdr.jpg",
-   "IMG_3068.jpg",
-   "IMG_3860.jpg"
-  ]
- }
-]
+{
+ "categories": [
+  {
+   "categoryName": "Memory",
+   "categoryPath": "albums/Memory",
+   "coverImage": "albums/Memory/cover.jpg",
+   "albums": []
+  },
+  {
+   "categoryName": "Landscape",
+   "categoryPath": "albums/Landscape",
+   "coverImage": "albums/Landscape/cover.jpg",
+   "albums": [
+    {
+     "albumName": "2019-12-23.\u5173\u5c9b",
+     "albumPath": "albums/Landscape/2019-12-23.\u5173\u5c9b",
+     "photoFiles": [
+      "IMG_3337.jpg",
+      "IMG_2924.jpg",
+      "IMG_3187.jpg",
+      "IMG_3682_hdr.jpg",
+      "IMG_3200.jpg",
+      "IMG_3555_hdr.jpg",
+      "IMG_3068.jpg",
+      "IMG_3860.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "categoryName": "Astrophotography",
+   "categoryPath": "albums/Astrophotography",
+   "coverImage": "albums/Astrophotography/cover.jpg",
+   "albums": [
+    {
+     "albumName": "2020-02-27.Garden.of.Stars",
+     "albumPath": "albums/Astrophotography/2020-02-27.Garden.of.Stars",
+     "photoFiles": [
+      "IMG_5097.jpg",
+      "IMG_5090.jpg",
+      "IMG_5086.jpg"
+     ]
+    }
+   ]
+  }
+ ]
+}

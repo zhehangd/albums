@@ -4,20 +4,36 @@
   <head>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     
-    <script id="template-photo" type="x-tmpl-mustache">
+    <script id="template-subcategory" type="x-tmpl-mustache">
       {{#albums}}
       <h2> {{albumName}} </h2>
-      <div class="photo-list">
+      <div class="photo-block">
         {{#photos}}
-        <div class="photo-container">
+        <div class="photo-frame photo">
           <a target="_blank" href="{{photoFile}}">
-            <img src="{{thumbnailFile}}" alt="Ballade" width="200" height="200" <="" a="">
+            <img src="{{thumbnailFile}}" alt="Ballade" a="">
           </a>
         </div>
         {{/photos}}
       </div>
       {{/albums}}
     </script>
+    
+    <script id="template-main" type="x-tmpl-mustache">
+      <div class="photo-block">
+        {{#categories}}
+        <div class="photo-frame category">
+          <a target="_blank" onclick="showCategoryByName('{{categoryName}}')">
+            <img src="{{coverFile}}" alt="Ballade" a="">
+          </a>
+          <div class="info">
+            <h2>{{categoryName}}</h2>
+          </div>
+        </div>
+        {{/categories}}
+      </div>
+    </script>
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.js"></script>
     <script src="start.js"></script>
