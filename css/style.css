@@ -46,6 +46,10 @@ a:active {color: inherit;text-decoration: none;}
   /*background: #201010;*/
 }
 
+.ablums-view {
+  transition: opacity 0.5s ease-in-out
+}
+
 .photo-block {
   display: flex;
   flex-wrap: wrap;

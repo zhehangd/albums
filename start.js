@@ -23,6 +23,28 @@ function requestFile(url, callback) {
 
 var albums_meta = [];
 
+class ViewSwitcher {
+  constructor() {
+    this.timeouts = {};
+  }
+  
+  switchView(elementId, newContent) {
+    if (this.timeouts.hasOwnProperty(elementId)) {
+      window.clearTimeout(this.timeouts[elementId]);
+    }
+    var switcher = this;
+    var element = document.getElementById(elementId);
+    element.style.opacity = 0;
+    this.timeouts[elementId] = window.setTimeout(function() {
+      element.innerHTML = newContent;
+      element.style.opacity = 1;
+      delete switcher.timeouts[elementId];
+    }, 500);
+  }
+}
+
+var viewSwitcher = new ViewSwitcher()
+
 function showSubcategory(subcategory_meta) {
   var view_category = {"albums" : []};
   for (var k = 0; k < subcategory_meta['albums'].length; k++) {
@@ -34,12 +56,13 @@ function showSubcategory(subcategory_meta) {
       photoFile = album.albumPath + '/' + album.photoFiles[i]
       thumbnailFile = album.albumPath + '/thumbnails/' + album.photoFiles[i]
       view_album.photos.push({'photoFile': photoFile, 'thumbnailFile': thumbnailFile});
+      new Image().src = thumbnailFile;
     }
     view_category['albums'].push(view_album);
   }
   var template = document.getElementById('template-subcategory').innerHTML;
-  var element = document.getElementById('dev-group');
-  element.innerHTML = Mustache.render(template, view_category);
+  var content = Mustache.render(template, view_category);
+  viewSwitcher.switchView('dev-group', content)
 }
 
 function showCategoryByName(categoryName) {
@@ -77,8 +100,8 @@ function dev() {
     view_main["categories"].push(view_category);
   }
   var template = document.getElementById('template-main').innerHTML;
-  var element = document.getElementById('main-group');
-  element.innerHTML = Mustache.render(template, view_main);
+  var content = Mustache.render(template, view_main);
+  viewSwitcher.switchView('main-group', content)
 }
 
 window.onload = function() {
