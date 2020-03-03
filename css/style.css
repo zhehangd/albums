@@ -51,24 +51,44 @@ a:active {color: inherit;text-decoration: none;}
   transition: opacity 0.5s ease-in-out
 }
 
+/* Container for a photo array */
 .photo-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Base container of one photo */
 .photo-frame {
   margin:12px;
   position: relative; /* must set so .info can set position */
   transition: transform 0.3s, border 0.3s;
   box-shadow: -1px 3px 4px #111;
-  border: 1px solid #cecece;
 }
 
 .photo-frame:hover {
   transition: transform 0.3s, border 0.3s;
   transform: scale(1.05);
+}
+
+/* Default attributes of cover images */
+[class*="cover"] {
+  transition: transform 0.3s, border 0.3s;
+  transform-origin: 100% 100%;
+  border: 1px solid #cecece;
+}
+
+.photo-frame:hover [class*="cover"] {
+  transition: transform 0.3s, border 0.3s;
   border: 1px solid #2293ec;
+}
+
+.photo-frame:hover .cover-2 {
+  transform: rotate(4deg) translate(10px, -5px);
+}
+
+.photo-frame:hover .cover-3 {
+  transform: rotate(-4deg) translate(-10px, 5px);
 }
 
 .photo {
@@ -101,58 +121,6 @@ a:active {color: inherit;text-decoration: none;}
   text-align: center;
   top: 130px;
 }
-
-.album {
-  margin:24px;
-  height: 200px;
-  width: 200px;
-  position: relative; /* must set so .info can set position */
-}
-
-.album img {
-  box-shadow: -1px 3px 4px #111;
-  border: 1px solid #bebebe;
-  position: absolute;
-  height: 200px;
-  width: 200px;
-  transition: border 0.3s;
-}
-
-.album:hover img {
-  transition: border 0.3s;
-  border: 1px solid #2293ec;
-}
-
-.album .cover-main {
-  transition: transform 0.3s, border 0.3s;
-}
-
-.album:hover .cover-main {
-  transition: transform 0.3s, border 0.3s;
-  transform: scale(1.05);
-}
-
-.album .cover-sub1, .album .cover-sub2 {
-  opacity: 0;
-  transform-origin: 100% 100%;
-  transition: transform 0.3s, opacity 1.0s, border 0.3s;
-}
-
-.album:hover .cover-sub1, .album:hover .cover-sub2 {
-  opacity: 1;
-  transform-origin: 100% 100%;
-  transition: transform 0.3s, opacity 1.0s, border 0.3s;
-}
-
-.album:hover .cover-sub1 {  
-  transform: rotate(5deg) translate(7px, 2px);
-}
-
-.album:hover .cover-sub2 {
-  transform: rotate(-5deg) translate(-8px, 5px);
-}
-
-
 
 #header-title {
   width: calc(100% - 300px);
