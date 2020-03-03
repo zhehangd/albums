@@ -5,6 +5,7 @@ body {
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
   margin-top: 80px;
+  background-attachment:fixed;
 }
 
 /* Horizontal Divider between Gallery Group */
@@ -57,7 +58,7 @@ a:active {color: inherit;text-decoration: none;}
 }
 
 .photo-frame {
-  margin:24px;
+  margin:12px;
   position: relative; /* must set so .info can set position */
   transition: transform 0.3s, border 0.3s;
   box-shadow: -1px 3px 4px #111;

@@ -4,7 +4,29 @@
    "categoryName": "Memory",
    "categoryPath": "albums/Memory",
    "coverImage": "albums/Memory/cover.jpg",
-   "albums": []
+   "albums": [
+    {
+     "albumName": "2019-03-24.\u676d\u9ad8\u6e7e\u533a\u805a\u4f1a",
+     "albumPath": "albums/Memory/2019-03-24.\u676d\u9ad8\u6e7e\u533a\u805a\u4f1a",
+     "photoFiles": [
+      "IMG_7352.jpg",
+      "IMG_7311.jpg",
+      "IMG_7294.jpg",
+      "IMG_7302.jpg",
+      "IMG_7299.jpg"
+     ]
+    },
+    {
+     "albumName": "2019-02-19.Cats",
+     "albumPath": "albums/Memory/2019-02-19.Cats",
+     "photoFiles": [
+      "IMG_7160.jpg",
+      "IMG_7164.jpg",
+      "IMG_7154.jpg",
+      "IMG_7140.jpg"
+     ]
+    }
+   ]
   },
   {
    "categoryName": "Landscape",
@@ -24,6 +46,40 @@
       "IMG_3068.jpg",
       "IMG_3860.jpg"
      ]
+    },
+    {
+     "albumName": "2019-06-29.Fremont Peak",
+     "albumPath": "albums/Landscape/2019-06-29.Fremont Peak",
+     "photoFiles": [
+      "IMG_1617.jpg",
+      "IMG_1623.jpg",
+      "IMG_1607.jpg",
+      "IMG_1422.jpg",
+      "IMG_1582.jpg"
+     ]
+    },
+    {
+     "albumName": "2018-12-23.Alaska",
+     "albumPath": "albums/Landscape/2018-12-23.Alaska",
+     "photoFiles": [
+      "IMG_7020-7022.jpg",
+      "IMG_6931.jpg",
+      "IMG_6919.jpg",
+      "IMG_6917.jpg",
+      "IMG_6377.jpg",
+      "IMG_6367.jpg",
+      "IMG_6540.jpg",
+      "IMG_6933.jpg",
+      "IMG_6525.jpg",
+      "IMG_6927.jpg",
+      "IMG_6421.jpg",
+      "IMG_6541.jpg",
+      "IMG_6523.jpg",
+      "IMG_6329.jpg",
+      "IMG_6395.jpg",
+      "IMG_6375.jpg",
+      "IMG_6987.jpg"
+     ]
     }
    ]
   },
@@ -33,12 +89,99 @@
    "coverImage": "albums/Astrophotography/cover.jpg",
    "albums": [
     {
+     "albumName": "2017-08-13.\u82f1\u4ed9\u5ea7\u6d41\u661f\u96e8",
+     "albumPath": "albums/Astrophotography/2017-08-13.\u82f1\u4ed9\u5ea7\u6d41\u661f\u96e8",
+     "photoFiles": [
+      "IMG_4405.jpg",
+      "IMG_4373.jpg",
+      "IMG_4372.jpg",
+      "IMG_4363_s.jpg"
+     ]
+    },
+    {
      "albumName": "2020-02-27.Garden.of.Stars",
      "albumPath": "albums/Astrophotography/2020-02-27.Garden.of.Stars",
      "photoFiles": [
       "IMG_5097.jpg",
       "IMG_5090.jpg",
       "IMG_5086.jpg"
+     ]
+    },
+    {
+     "albumName": "2016.07.03.DeathValley",
+     "albumPath": "albums/Astrophotography/2016.07.03.DeathValley",
+     "photoFiles": [
+      "milkyway-m31.jpg",
+      "IMG_9370.jpg",
+      "IMG_9283.jpg",
+      "summer-triangle_s.jpg",
+      "IMG_9353.jpg",
+      "milkyway-center_s.jpg",
+      "IMG_9248.jpg",
+      "IMG_9245.jpg"
+     ]
+    },
+    {
+     "albumName": "2016.07.09.Malibu",
+     "albumPath": "albums/Astrophotography/2016.07.09.Malibu",
+     "photoFiles": [
+      "IMG_9890.jpg",
+      "IMG_9859.jpg",
+      "IMG_9968.jpg",
+      "IMG_9973.jpg",
+      "IMG_9896.jpg",
+      "IMG_9980.jpg",
+      "IMG_9981.jpg",
+      "IMG_9982.jpg",
+      "IMG_9965.jpg"
+     ]
+    },
+    {
+     "albumName": "2016.08.12.Perseids",
+     "albumPath": "albums/Astrophotography/2016.08.12.Perseids",
+     "photoFiles": [
+      "IMG_0604y.jpg",
+      "IMG_0772-1.jpg",
+      "IMG_0358.jpg",
+      "IMG_0344.jpg",
+      "IMG_0799.jpg",
+      "IMG_0826.jpg",
+      "IMG_0339.jpg",
+      "IMG_0363.jpg"
+     ]
+    },
+    {
+     "albumName": "2019-06-29.Fremont Peak",
+     "albumPath": "albums/Astrophotography/2019-06-29.Fremont Peak",
+     "photoFiles": [
+      "IMG_1653.jpg",
+      "IMG_1646_label..jpg",
+      "IMG_1696.jpg",
+      "IMG_1682.jpg",
+      "IMG_1650.jpg",
+      "IMG_1652.jpg"
+     ]
+    },
+    {
+     "albumName": "2018-12-23.Alaska",
+     "albumPath": "albums/Astrophotography/2018-12-23.Alaska",
+     "photoFiles": [
+      "IMG_6857.jpg",
+      "IMG_6716.jpg",
+      "IMG_6557.jpg",
+      "IMG_6711.jpg",
+      "IMG_6718.jpg",
+      "IMG_6563.jpg",
+      "IMG_6329.jpg"
+     ]
+    },
+    {
+     "albumName": "2017-09-09.Yosemite",
+     "albumPath": "albums/Astrophotography/2017-09-09.Yosemite",
+     "photoFiles": [
+      "IMG_4787.jpg",
+      "IMG_4744.jpg",
+      "IMG_4800.jpg"
      ]
     }
    ]
